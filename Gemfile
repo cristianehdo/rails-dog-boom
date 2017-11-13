@@ -16,6 +16,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+gem 'devise' # user
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
