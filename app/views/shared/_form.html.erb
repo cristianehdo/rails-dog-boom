@@ -1,0 +1,11 @@
+<!-- render 'shared/form' -->
+<div class="container">
+  <div class="row">
+    <div class= col-xs-6>
+<%= simple_form_for [@booking] do |f| %>
+  <%= f.input :date %>
+  <%= f.input :category %>
+<% end %>
+    </div>
+  </div>
+</div>
