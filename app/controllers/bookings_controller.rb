@@ -22,7 +22,7 @@ class BookingsController < ApplicationController
 
 
   def search
-    # @bookings = Booking.where(category: params[])
+    # @bookings = Booking.where(category: params[:category])
   end
 
   def booking_params
