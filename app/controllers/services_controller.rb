@@ -33,6 +33,7 @@ class ServicesController < ApplicationController
   def destroy
      @service = find_service
      @service.destroy
+     authorize(@service)
   end
 
   private
