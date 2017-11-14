@@ -36,8 +36,9 @@
   text-transform: uppercase;
 }
 .white-card-description {
+  border: 1px solid gray;
   position: absolute;
-  bottom: 10px;
+  bottom: 50px;
   left: 10px;
   h2 {
     font-size: 24px;
@@ -60,4 +61,9 @@
 }
 .white-card-link:hover {
   opacity: 0.1;
+}
+
+.white-card-book-link {
+  position: absolute;
+  bottom: 10px;
 }
