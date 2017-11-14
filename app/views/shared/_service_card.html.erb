@@ -2,16 +2,31 @@
 <div class="cards">
   <% @services.each do |service| %>
   <div class="white-card-lg">
-    <div class="white-card-category"><%= service.category %></div>
+    <div class="white-card-user-details">
+      <img class="white-card-user avatar" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+      <span class="user-name"><%= service.user.email %></span>
+      <span>
+        <% if service.category == "walking" %>
+            W
+        <% elsif service.category == "sitting" %>
+            S
+        <% else %>
+            G
+        <% end %>
+      </span>
+    </div>
     <div class="white-card-description">
       <h2><%= service.title %></h2>
       <p><%= service.description %></p>
     </div>
-    <img class="white-card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-    <a class="white-card-link" href="#" ></a>
+    <div class="white-card-user-rating">
+      <span>rating</span>
+      <span>30$</span>
+    </div>
     <div class="white-card-book-link">
       <a href="#" class="btn">Book</a>
     </div>
+    <a class="white-card-link" href="#" ></a>
   </div>
   <% end %>
 </div>
