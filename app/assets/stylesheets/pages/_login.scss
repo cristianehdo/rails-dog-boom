@@ -4,15 +4,24 @@
 
     width: 100%;
     height: calc(100vh - 70px);
+    background-color: #fff;
 }
 
 .login-content
 {
     display: block;
-
+    position: relative;
     width: 40vw;
     height: calc(100vh - 70px);
     padding: 60px;
+}
+
+.login-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  margin: 0 0 0 -250px;
 }
 
 .login-banner
@@ -28,20 +37,106 @@
     background-size: cover;
 }
 
+.input-row {
+  display: flex;
+  width: 500px;
+  .form-control {
+    width: 430px;
+  }
+}
+
+.input-icon
+{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #d7dae5;
+    border-width: 1px 0 1px 1px;
+    text-align: center;
+    line-height: 60px;
+
+    i {
+      color: #d7dae5;
+    }
+}
+
+.input-holder {
+  display: inline-block;
+}
+
+.btn-center {
+  margin: 0 auto !important;
+}
+
+.form-links {
+  margin:  20px auto 0 auto;
+  text-align: center;
+  a {
+  margin: 0 10px 0 0;
+  color: #4786fe;
+  font-size: 13px;
+  }
+}
+
 /* bootstrap form override */
+
+.form-actions
+{
+  margin: 0 auto;
+  text-align: center;
+}
 .form-control
 {
     height: 60px;
 
-    border: 1px solid #edeef2 !important;
-    border-radius: 2px !important;
+    border: 1px solid #d7dae5 !important;
     outline: none !important;
+    margin: 0 !important;
+    border-color: rgba(126, 239, 104, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0) inset, 0 0 0 rgba(126, 239, 104, 0);
+    outline: 0 none;
+    box-shadow:none !important;
 }
 
-.simplebox {
-  outline: none;
-  border: none !important;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  box-shadow: none !important;
+.form-control::-webkit-input-placeholder {
+  color: #d7dae5;
+}
+.form-control::-moz-placeholder {
+  color: #d7dae5;
+}
+.form-control:-ms-input-placeholder {
+  color: #d7dae5;
+}
+.form-control:-moz-placeholder {
+  color: #d7dae5;
+}
+
+.simplebox
+{
+    border: none !important;
+    outline: none;
+    -webkit-box-shadow: none !important;
+       -moz-box-shadow: none !important;
+            box-shadow: none !important;
+}
+
+.btn-default {
+  background-color: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #4786fe;
+  color: #4786fe;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-radius:  2px;
+  padding:  12px 33px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-default:hover {
+  background-color: #4786fe;
+  border-color: #4786fe;
+  color: #fff;
 }
