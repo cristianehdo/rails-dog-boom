@@ -1,9 +1,17 @@
 // Import your components CSS files here.
-@import "alert";
-@import "navbar";
-@import "footer";
+@import 'alert';
+@import 'navbar';
+@import 'footer';
+@import 'card';
 
 
-body {
-  background-color: #f6f7fb;
+
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #f6f7fb;
 }
