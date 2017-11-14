@@ -19,6 +19,8 @@ class ServicesController < ApplicationController
   end
 
   def show
+    @service = find_service
+    authorize(@service)
   end
 
   def edit
