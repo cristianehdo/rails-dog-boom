@@ -3,6 +3,7 @@
 @import 'navbar';
 @import 'footer';
 @import 'card';
+@import "avatar";
 
 
 
@@ -15,3 +16,6 @@ body
 {
     background-color: #f6f7fb;
 }
+
+@import "card";
+

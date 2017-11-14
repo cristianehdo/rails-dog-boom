@@ -1,31 +1,34 @@
-<div class="navbar-wagon">
-  <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
+<div class="navbar-pet">
+
+  <a href="" class="navbar-pet-brand">
     <i class="fa fa-paw" aria-hidden="true"></i>
   </a>
 
+<div class="navbar-pet-middle">
+  <a href="" class="nav-category-pet navbar-pet-link">
+    <%= image_tag("walk.png") %>
+  </a>
+  <a href="" class="nav-category-pet navbar-pet-link">
+    <%= image_tag("sitting.png") %>
+  </a>
+  <a href="" class="nav-category-pet navbar-pet-link">
+    <%= image_tag("grooming.png") %>
+  </a>
+</div>
   <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
+  <div class="navbar-pet-right">
 
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
+    <a href="" class="navbar-pet-item navbar-pet-link">LOGIN</a>
+    <a href="" class="navbar-pet-item navbar-pet-link">SING UP</a>
 
-    <!-- Profile picture with dropdown list -->
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Log Out</a></li>
-        </ul>
-      </div>
-    </div>
   </div>
 
   <!-- Dropdown appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
+  <div class="navbar-pet-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Messagese</a></li>
+      <ul class="dropdown-menu dropdown-menu-right navbar-pet-dropdown-menu">
+        <li><a href="#">Messages</a></li>
       </ul>
     </div>
   </div>
