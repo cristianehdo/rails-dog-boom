@@ -1,0 +1,47 @@
+.login-container
+{
+    display: flex;
+
+    width: 100%;
+    height: calc(100vh - 70px);
+}
+
+.login-content
+{
+    display: block;
+
+    width: 40vw;
+    height: calc(100vh - 70px);
+    padding: 60px;
+}
+
+.login-banner
+{
+    position: relative;
+
+    display: block;
+
+    width: 60vw;
+    height: calc(100vh - 70px);
+
+    background-image: url('https://images.unsplash.com/photo-1501497977511-68895b5d25c6?auto=format&fit=crop&w=3400&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+    background-size: cover;
+}
+
+/* bootstrap form override */
+.form-control
+{
+    height: 60px;
+
+    border: 1px solid #edeef2 !important;
+    border-radius: 2px !important;
+    outline: none !important;
+}
+
+.simplebox {
+  outline: none;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
