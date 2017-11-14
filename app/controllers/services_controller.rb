@@ -22,13 +22,17 @@ class ServicesController < ApplicationController
   end
 
   def edit
+    @service = find_service
+    authorize(@service)
   end
 
   def update
+
   end
 
   def destroy
-
+     @service = find_service
+     @service.destroy
   end
 
   private
