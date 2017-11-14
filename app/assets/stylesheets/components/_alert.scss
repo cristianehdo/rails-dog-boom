@@ -2,6 +2,13 @@
  * Your CSS code for flash notices and alerts
 * ------------------------------------- */
 
+.notices-container {
+  width: calc(100vw - 40px);
+  position: absolute;
+  top: 90px;
+  left: 20px;
+}
+
 .alert {
   margin: 0;
   text-align: center;
