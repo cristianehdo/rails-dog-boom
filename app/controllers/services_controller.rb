@@ -1,8 +1,9 @@
 class ServicesController < ApplicationController
-  before_action :find_service, only: [ :show, :edit, :update, :create, :destroy ]
+  before_action :find_service, only: [ :show, :edit, :update, :destroy ]
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
+    @services = policy_scope(Service)
   end
 
   def new
@@ -37,6 +38,6 @@ class ServicesController < ApplicationController
   end
 
   def service_params
-    params.require(:service).permit(:name, :category, :description)
+    params.require(:service).permit(:title, :category, :description)
   end
 end
