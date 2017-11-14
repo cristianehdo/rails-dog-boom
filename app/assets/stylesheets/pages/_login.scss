@@ -74,7 +74,7 @@
   text-align: center;
   a {
   margin: 0 10px 0 0;
-  color: #4786fe;
+  color: $brand-primary;
   font-size: 13px;
   }
 }
@@ -125,8 +125,8 @@
   background-color: none;
   border-width: 1px;
   border-style: solid;
-  border-color: #4786fe;
-  color: #4786fe;
+  border-color: $brand-primary;
+  color: $brand-primary;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 1px;
@@ -136,7 +136,28 @@
 }
 
 .btn-default:hover {
-  background-color: #4786fe;
-  border-color: #4786fe;
+  background-color: $brand-primary;
+  border-color: $brand-primary;
   color: #fff;
+}
+
+
+.btn-primary {
+  background-color: $brand-primary;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $brand-primary !important;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-radius:  2px;
+  padding:  12px 33px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: none !important;
+  border-color: $brand-primary;
+  color: $brand-primary;
 }
