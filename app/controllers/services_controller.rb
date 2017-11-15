@@ -33,8 +33,8 @@ class ServicesController < ApplicationController
   end
 
   def update
-    @service.update(service_params)
-    if @service.save
+    authorize(@service)
+    if @service.update(service_params)
       redirect_to service_path(@service)
     else
       render "edit"
@@ -42,7 +42,6 @@ class ServicesController < ApplicationController
   end
 
   def destroy
-     @service = find_service
      @service.destroy
      authorize(@service)
      redirect_to services_path(@service)
