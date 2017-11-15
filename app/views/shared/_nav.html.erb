@@ -1,11 +1,11 @@
 <div class="navbar-pet">
 
-  <a href="" class="navbar-pet-brand">
+  <%= link_to root_path, class: "navbar-pet-brand" do %>
     <div class="logo-circle">
       <i class="fa fa-paw" aria-hidden="true"></i>
     </div>
     <div class="logo-text">Pet Boom!</div>
-  </a>
+  <% end %>
 
 <div class="navbar-pet-middle">
   <a href="" class="nav-category-pet navbar-pet-link">
@@ -21,8 +21,13 @@
   <!-- Right Navigation -->
   <div class="navbar-pet-right">
 
-    <a href="" class="navbar-pet-item navbar-pet-link">Login</a>
-    <a href="" class="navbar-pet-item navbar-pet-link">Sign up</a>
+    <% if user_signed_in? %>
+      <%= link_to('Create', new_service_path, class: "btn btn-default") %>
+      <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "navbar-pet-item navbar-pet-link") %>
+    <% else %>
+      <%= link_to('Sign up', new_user_registration_path, class: "btn btn-default") %>
+      <%= link_to('Login', new_user_session_path, class: "navbar-pet-item navbar-pet-link") %>
+    <% end %>
 
   </div>
 
