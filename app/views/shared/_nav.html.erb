@@ -4,7 +4,7 @@
     <div class="logo-circle">
       <i class="fa fa-paw" aria-hidden="true"></i>
     </div>
-    <div class="logo-text <% if current_page?(root_path) %>white-logo<% end %>">Pet Boom!</div>
+    <div id="logo-text" class="logo-text <% if current_page?(root_path) %>white-logo<% end %>">Pet Boom!</div>
   <% end %>
 
 <div class="navbar-pet-middle">
@@ -27,7 +27,7 @@
     <% else %>
       <%= link_to('Sign up', new_user_registration_path, class: "btn btn-primary") %>
       <% if current_page?(root_path) %>
-        <%= link_to('Login', new_user_session_path, class: "btn btn-white ") %>
+        <%= link_to('Login', new_user_session_path, class: "btn btn-white ", id: "login-btn") %>
       <% else %>
         <%= link_to('Login', new_user_session_path, class: "btn btn-white btn-to-blue") %>
       <% end %>
