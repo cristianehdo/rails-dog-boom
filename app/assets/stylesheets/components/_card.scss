@@ -1,91 +1,193 @@
-.container-white {
-  background-color: #F9FBFC;
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-  padding: 80px 0;
+.container-white
+{
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+
+    text-align: center;
+
+    background-color: #f9fbfc;
+    transition: scale .5s ease-in-out;
 }
 
-.cards {
-  width: 100%;
-  h2 {
-    padding: 30px;
-  }
+.white-card-lg:hover {
+  transform: scale(1.02)
 }
 
-.white-card-lg {
-  width: 350px;
-  height: 460px;
-  margin: 10px;
-  padding: 20px 10px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-color: white;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-.white-card-user-details {
-  width: 290px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  .user-name {
-    text-align: left;
-    padding-left: 10px;
-    flex-grow: 1;
-  }
+.white-card-lg:hover .btn-book {
+  background-color: $brand-primary;
+  color: #fff;
 }
 
 
-.white-card-description {
-  padding: 0 5px;
-  width: 290px;
-  height: 175px;
-  border: 1px solid #ECEFF6;
-  h2 {
-    font-size: 24px;
-    margin: 0;
-  }
-  p {
-    font-size: 14px;
-    opacity: 0.7;
-    font-weight: lighter;
-  }
-}
-.white-card-link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  z-index: 2;
-  background: black;
-  opacity: 0;
-}
-.white-card-link:hover {
-  opacity: 0.1;
+.cards
+{
+    width: 100%;
+    h2
+    {
+        padding: 30px;
+    }
 }
 
-.white-card-book-link {
-  a {
+.white-card-lg
+{
+    position: relative;
+
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+
+    width: 350px;
+    margin: 10px 0 30px 0;
+    padding: 0;
+
     color: black;
-    opacity: 0.6;
-  }
+    border-radius: 4px;
+    background-color: white;
+
+    align-items: center;
+    justify-content: space-between;
+}
+.white-card-user-details
+{
+    display: flex;
+
+    width: 100%;
+    padding: 20px;
+
+    align-items: center;
+    justify-content: space-between;
+    .user-name
+    {
+        text-align: left;
+        text-indent: 15px;
+
+        flex-grow: 1;
+    }
 }
 
-.white-card-user-rating {
-  width: 290px;
-  height: 75px;
-  border: 1px solid #ECEFF6;
-  padding: 5px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: rgba(50, 50, 50, 0.8);
-  i {
-    color: rgba(50, 50, 50, 0.6);
-  }
+
+.white-card-description
+{
+    width: 90%;
+    padding: 20px;
+
+    border: 1px solid #eceff6;
+    border-width: 1px 0 0 0;
+    h2
+    {
+        font-size: 22px;
+        padding:10px;
+        margin: 0;
+    }
+    p
+    {
+        font-size: 14px;
+        font-weight: lighter;
+    }
+}
+.white-card-link
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    opacity: 0;
+    background: black;
+}
+
+
+.white-card-book-link
+{
+    a
+    {
+        color: black;
+    }
+}
+
+.white-card-user-rating
+{
+    display: flex;
+
+    width: 90%;
+    height: 75px;
+    padding: 10px;
+
+    color: rgba(50, 50, 50, .8);
+    border: 1px solid #eceff6;
+    border-width: 1px 0 0 0;
+
+    align-items: center;
+    justify-content: space-between;
+    i
+    {
+        font-size: 23px;
+
+        margin: 0 0 0 5px;
+
+        color: rgba(50, 50, 50, .6);
+    }
+}
+
+.tag-container
+{
+    position: relative;
+
+    display: flex;
+}
+
+.tag-box
+{
+    font-size: 12px;
+
+    padding: 5px 10px 5px 10px;
+
+    letter-spacing: 1px;
+
+    color: #fff;
+    border-radius: 0 2px 2px 0;
+    background-color: $brand-primary;
+}
+
+.tag-point
+{
+    width: 0;
+    height: 0;
+
+    border-top: 15px solid transparent;
+    border-right: 12px solid $brand-primary;
+    border-bottom: 15px solid transparent;
+}
+
+.tag-hole
+{
+    position: absolute;
+    top: 12px;
+    left: 9px;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.btn-book
+{
+    font-size: 15px;
+    line-height: 58px;
+
+    display: block;
+
+    width: 100%;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    background-color: #f2f5f7;
+    color: #c9d5db;
 }
