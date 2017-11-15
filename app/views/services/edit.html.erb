@@ -1,35 +1,7 @@
 <div class="form-template-container">
   <div class="form-template-content">
     <div class="form-template-center">
-      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form-inputs">
-          <div class="input-row">
-            <div class="input-icon">
-              <i class="fa fa-user" aria-hidden="true"></i>
-            </div>
-            <div class="input-holder">
-              <%= f.input :email, required: false, placeholder: 'E-mail', label: false %>
-            </div>
-          </div>
-          <div class="input-row">
-            <div class="input-icon">
-              <i class="fa fa-key" aria-hidden="true"></i>
-            </div>
-            <div class="input-holder">
-              <%= f.input :password, required: false, placeholder: 'Password', label: false %>
-            </div>
-          </div>
-          <% f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-        </div>
-
-        <div class="form-actions">
-          <%= f.button :submit, "Log in", class: "btn-center" %>
-        </div>
-      <% end %>
-
-      <div class="form-links">
-      <%= render "devise/shared/links" %>
-      </div>
+      <%= render 'shared/service_form' %>
     </div>
   </div>
   <div class="form-template-banner" style="background-image: url('https://images.unsplash.com/photo-1502673530728-f79b4cab31b1?auto=format&fit=crop&w=2250&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');">

@@ -15,7 +15,11 @@ class ServicesController < ApplicationController
     @service = Service.new(service_params)
     @service.user = current_user
     authorize(@service)
-    @service.save
+    if @service.save
+      redirect_to service_path(@service)
+    else
+      render "new"
+    end
   end
 
   def show
@@ -29,13 +33,18 @@ class ServicesController < ApplicationController
   end
 
   def update
-
+    authorize(@service)
+    if @service.update(service_params)
+      redirect_to service_path(@service)
+    else
+      render "edit"
+    end
   end
 
   def destroy
-     @service = find_service
      @service.destroy
      authorize(@service)
+     redirect_to services_path(@service)
   end
 
   private
