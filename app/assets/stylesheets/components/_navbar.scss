@@ -18,7 +18,7 @@
 }
 
 .navbar-pet {
-  background-color: #fff;
+  background-color: rgba(255,255,255,1);
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 120px;
@@ -27,8 +27,16 @@
   justify-content: space-between;
   position: fixed;
   width: 100%;
+  top: 0;
   z-index:1;
-  top:0;
+}
+
+.transparent-nav {
+  background-color: rgba(255,255,255,0) !important;
+}
+
+.white-logo {
+  color: #fff !important;
 }
 
 /* Logo */
@@ -37,12 +45,20 @@
   line-height:70px;
 }
 
+@media (min-width: 1000px) {
   .logo-text {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
     line-height: 70px;
   }
+}
+
+@media (max-width:1000px) {
+  .logo-text {
+    display: none;
+  }
+}
 
   .navbar-pet-brand:hover {
     text-decoration: none !important;
@@ -132,4 +148,39 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.btn-white {
+  background-color: none !important;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-radius:  2px;
+  padding:  12px 33px;
+  transition: background-color 0.2s ease-in-out;
+  margin: 0 0 0 20px;
+}
+
+.btn-white:hover {
+  background-color: $brand-primary !important;
+  border-color: $brand-primary !important;
+  color: #fff;
+}
+
+.btn-to-blue {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $brand-primary !important;
+  color: $brand-primary !important;
+}
+
+.btn-to-blue:hover {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $brand-primary !important;
+  color: #fff !important;
 }
