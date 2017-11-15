@@ -1,1 +1,39 @@
+
 <h1><%= @service.title %></h1>
+<div class="container text-center">
+      <div class="dashboard-grid">
+        <div class="card profile">
+          <div class="card-content">
+            <img src="https://kitt.lewagon.com/placeholder/users/tgenaitay" alt="" width="150" class="img-circle">
+            <h2><%= @service.user.first_name %> <%= @service.user.last_name %></h2>
+            <p><%= @service.title  %></p>
+            <a href="#" class="btn btn-primary btn-lg">Book</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content" ><i class="fa fa-heart" aria-hidden="true"></i>
+             <img src="https://images.unsplash.com/photo-1498844807099-89463d98dfe6?auto=format&fit=crop&w=2700&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="" width="250" height="200">
+
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content"><i class="fa fa-heart" aria-hidden="true"></i>
+            <img src="https://images.unsplash.com/photo-1452457763481-bf66c83f94ee?auto=format&fit=crop&w=2691&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="" width="250" height="200">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content"><i class="fa fa-heart" aria-hidden="true"></i>
+            <img src="https://images.unsplash.com/photo-1453227588063-bb302b62f50b?auto=format&fit=crop&w=1650&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D" alt="" width="250" height="200">
+          </div>
+        </div>
+        <div class="card description">
+          <div class="card-content pad">
+            <h3>More about <%= @service.user.first_name %> <%= @service.user.last_name %> <%= @service.title  %>
+</h3>
+            <p class="text-justify">
+             <%= @service.description %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
