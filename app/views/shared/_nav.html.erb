@@ -1,11 +1,11 @@
-<div class="navbar-pet">
+<div class="navbar-pet <% if current_page?(root_path) %>transparent-nav<% end %>">
 
-  <a href="" class="navbar-pet-brand">
+  <%= link_to root_path, class: "navbar-pet-brand" do %>
     <div class="logo-circle">
       <i class="fa fa-paw" aria-hidden="true"></i>
     </div>
-    <div class="logo-text">Pet Boom!</div>
-  </a>
+    <div class="logo-text <% if current_page?(root_path) %>white-logo<% end %>">Pet Boom!</div>
+  <% end %>
 
 <div class="navbar-pet-middle">
   <a href="" class="nav-category-pet navbar-pet-link">
@@ -21,18 +21,17 @@
   <!-- Right Navigation -->
   <div class="navbar-pet-right">
 
-    <a href="" class="navbar-pet-item navbar-pet-link">Login</a>
-    <a href="" class="navbar-pet-item navbar-pet-link">Sign up</a>
+    <% if user_signed_in? %>
+      <%= link_to('Create', new_service_path, class: "btn btn-primary") %>
+      <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "navbar-pet-item navbar-pet-link") %>
+    <% else %>
+      <%= link_to('Sign up', new_user_registration_path, class: "btn btn-primary") %>
+      <% if current_page?(root_path) %>
+        <%= link_to('Login', new_user_session_path, class: "btn btn-white ") %>
+      <% else %>
+        <%= link_to('Login', new_user_session_path, class: "btn btn-white btn-to-blue") %>
+      <% end %>
+    <% end %>
 
-  </div>
-
-  <!-- Dropdown appearing on mobile only -->
-  <div class="navbar-pet-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-pet-dropdown-menu">
-        <li><a href="#">Messages</a></li>
-      </ul>
-    </div>
   </div>
 </div>

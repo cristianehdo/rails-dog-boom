@@ -37,6 +37,17 @@
     background-size: cover;
 }
 
+@media (max-width:1000px) {
+  .login-banner
+  {
+    display: none;
+  }
+  .login-content
+  {
+    width: 100vw;
+  }
+}
+
 .input-row {
   display: flex;
   width: 500px;
@@ -122,7 +133,7 @@
 }
 
 .btn-default {
-  background-color: none;
+  background-color: none !important;
   border-width: 1px;
   border-style: solid;
   border-color: $brand-primary;
@@ -136,7 +147,7 @@
 }
 
 .btn-default:hover {
-  background-color: $brand-primary;
+  background-color: $brand-primary !important;
   border-color: $brand-primary;
   color: #fff;
 }
@@ -158,6 +169,6 @@
 
 .btn-primary:hover {
   background-color: none !important;
-  border-color: $brand-primary;
+  border-color: $brand-primary !important;
   color: $brand-primary;
 }
