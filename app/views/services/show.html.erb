@@ -4,8 +4,10 @@
           <div class="card-content">
             <img src="https://kitt.lewagon.com/placeholder/users/tgenaitay" alt="" width="150" class="img-circle">
             <h2><%= @service.user.first_name %> <%= @service.user.last_name %></h2>
-            <p><%= @service.title  %></p>
-            <a href="#" class="btn btn-primary btn-lg">Book</a>
+            <p><%= @service.category  %></p>
+            <% if current_user != @service.user %>
+              <a href="#" class="btn btn-primary btn-lg">Book</a>
+            <% end %>
           </div>
         </div>
         <div class="card">
@@ -26,11 +28,14 @@
         </div>
         <div class="card description">
           <div class="card-content pad">
-            <h3>More about <%= @service.user.first_name %> <%= @service.user.last_name %> <%= @service.title  %>
-</h3>
+            <h3><%= @service.title  %></h3>
             <p class="text-justify">
              <%= @service.description %>
             </p>
+            <% if policy(@service).edit? %>
+            <%= link_to "Edit", edit_service_path(@service), class: "btn btn-primary btn-lg" %>
+            <%= link_to "delete", service_path(@service), method: :delete, data: {confirm: "are you sure?"}, class: "btn btn-primary btn-lg" %>
+            <% end %>
           </div>
         </div>
       </div>
