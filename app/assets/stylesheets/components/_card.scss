@@ -1,7 +1,9 @@
 .container-white {
+  background-color: #F9FBFC;
   margin: 0 auto;
   text-align: center;
-  width: 80%;
+  width: 100%;
+  padding: 80px 0;
 }
 
 .cards {
@@ -82,5 +84,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  opacity: 0.9;
+  color: rgba(50, 50, 50, 0.8);
+  i {
+    color: rgba(50, 50, 50, 0.6);
+  }
 }
