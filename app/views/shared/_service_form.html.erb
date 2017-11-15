@@ -1,10 +1,35 @@
   <div class="row">
-    <div class= col-xs-6>
       <%= simple_form_for [@service] do |f| %>
-        <%= f.input :title %>
-        <%= f.input :category %>
-        <%= f.input :description %>
-        <%= f.submit %>
+        <div class="input-row">
+          <div class="input-icon">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </div>
+          <div class="input-holder">
+            <%= f.input :title, required: false, placeholder: 'Title', label: false %>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input-icon">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </div>
+          <div class="input-holder">
+            <%= f.input :category, required: false, placeholder: 'Category', label: false %>
+          </div>
+        </div>
+
+
+        <div class="input-row">
+          <div class="input-icon">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </div>
+          <div class="input-holder">
+            <%= f.input :description, required: false, placeholder: 'Description', label: false %>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Create", class: "btn-center" %>
+        </div>
       <% end %>
-    </div>
   </div>
