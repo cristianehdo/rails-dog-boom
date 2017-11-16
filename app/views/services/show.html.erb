@@ -6,7 +6,7 @@
             <h2><%= @service.user.first_name %> <%= @service.user.last_name %></h2>
             <p><%= @service.category  %></p>
             <% if current_user != @service.user %>
-              <a href="#" class="btn btn-primary btn-lg">Book</a>
+            <%= link_to "Book", new_service_booking_path(@service), class: "btn btn-primary btn-lg" %>
             <% end %>
           </div>
         </div>
