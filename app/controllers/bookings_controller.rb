@@ -15,11 +15,13 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @service = Service.find(params[:service_id])
     @booking = Booking.new(booking_params)
-    @booking.service = Service.find(params[:service_id])
-
+    @booking.service = @service
+    @booking.user = current_user
+    authorize(@booking)
     if @booking.save
-      redirect_to service_booking_path(@booking)
+      redirect_to service_path(@service)
     else
       render :new
     end

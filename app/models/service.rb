@@ -1,5 +1,6 @@
 class Service < ApplicationRecord
   belongs_to :user
+  has_many :bookings
 
   geocoded_by :postcode
   after_validation :geocode, if: :postcode_changed?
