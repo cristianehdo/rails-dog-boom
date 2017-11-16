@@ -37,3 +37,20 @@ export { initUpdateNavbarOnScroll };
 $("#menu-trigger").click(function(){
     $("#nav-menu").fadeToggle();
 });
+
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#img-preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#img-file").change(function(){
+        readURL(this);
+    });

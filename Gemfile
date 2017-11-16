@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.3.5'
 
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'pg'

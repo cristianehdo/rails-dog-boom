@@ -2,7 +2,7 @@
       <div class="dashboard-grid">
         <div class="card profile">
           <div class="card-content">
-            <img src="https://kitt.lewagon.com/placeholder/users/tgenaitay" alt="" width="150" class="img-circle">
+            <%= cl_image_tag @service.user.photo, height: 250, width: 300, crop: :fill %>
             <h2><%= @service.user.first_name %> <%= @service.user.last_name %></h2>
             <p><%= @service.category  %></p>
             <% if current_user != @service.user %>

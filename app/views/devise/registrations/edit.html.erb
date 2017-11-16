@@ -1,3 +1,5 @@
+<div class="container">
+
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -9,6 +11,12 @@
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
+    <div class="img-preview-container">
+      <img id="img-preview" class="img-preview">
+      <%= f.file_field :photo, id: "img-file", class: "img-button" %>
+      <p>Upload your photo!</p>
+    </div>
+    <%= f.hidden_field :photo_cache %>
 
     <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
     <%= f.input :password_confirmation, required: false %>
@@ -25,3 +33,4 @@
 <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+</div>
