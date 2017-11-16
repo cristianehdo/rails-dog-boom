@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :bookings
   has_many :services, through: :bookings
+
+  validates :email, presence: true, format: { with: /\A.*@.*\.*\z/ }
 end
