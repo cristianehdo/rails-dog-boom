@@ -16,7 +16,9 @@ end
   users = User.all # creatign array of all users
   user = users.sample # choosing a randon user from array
   categories = ["walking", "sitting", "grooming"]
-  new_service = Service.new( title: Faker::Lorem.word, category: "#{categories.sample}", description: Faker::Lorem.paragraph)
+  postcodes = ["E12 5AA", "E12 5AS", "NW3 1AA", "NW3 1FR", "SW2 1AJ", "SW2 1ED"]
+  radius = [1, 5, 10, 15]
+  new_service = Service.new( title: Faker::Lorem.word, category: "#{categories.sample}", description: Faker::Lorem.paragraph, postcode: "#{postcodes.sample}", postcode_radius: radius.sample)
   new_service.user = user
   new_service.save
   puts "creating service #{new_service.title}"
