@@ -6,7 +6,7 @@
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="white-card-lg">
           <div class="white-card-user-details">
-            <img class="white-card-user avatar" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+            <%= cl_image_tag service.user.photo, class: "white-card-user avatar"%>
             <span class="user-name"><%= service.user.first_name %></span>
             <span>
               <% if service.category == "walking" %>
