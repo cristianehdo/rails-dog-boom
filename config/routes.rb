@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     collection do
       get 'search', to: 'services#search'
     end
+    resources :bookings, only: [:new, :create]
   end
+  resources :bookings, only: [:destroy]
 end
