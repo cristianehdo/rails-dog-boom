@@ -305,3 +305,10 @@
     color: #c9d5db;
     background-color: #f2f5f7;
 }
+
+.cards-with-map {
+  display: flex;
+  .cards {
+    flex-grow: 1;
+  }
+}

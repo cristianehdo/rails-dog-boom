@@ -48,8 +48,13 @@ class ServicesController < ApplicationController
   end
 
   def search
-    @services = Service.near(params[:postcode], 5)
+    @services = Service.near(params[:postcode], 7)
     authorize(@services)
+     @hash = Gmaps4rails.build_markers(@services) do |service, marker|
+      marker.lat service.latitude
+      marker.lng service.longitude
+      # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+    end
   end
 
   private
