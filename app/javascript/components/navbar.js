@@ -32,3 +32,8 @@ function initUpdateNavbarOnScroll() {
 }
 
 export { initUpdateNavbarOnScroll };
+
+// Nav menu toggle
+$("#menu-trigger").click(function(){
+    $("#nav-menu").fadeToggle();
+});
