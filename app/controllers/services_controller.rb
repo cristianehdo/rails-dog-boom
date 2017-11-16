@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
   before_action :find_service, only: [ :show, :edit, :update, :destroy ]
-  skip_before_action :authenticate_user!, only: [ :index, :show ]
+  skip_before_action :authenticate_user!, only: [ :index, :show, :search ]
 
   def index
     @services = policy_scope(Service)
@@ -45,6 +45,11 @@ class ServicesController < ApplicationController
      @service.destroy
      authorize(@service)
      redirect_to services_path(@service)
+  end
+
+  def search
+    @services = Service.near(params[:postcode], 5)
+    authorize(@services)
   end
 
   private

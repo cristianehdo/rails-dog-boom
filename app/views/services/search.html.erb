@@ -1,0 +1,10 @@
+<h1>Services next to <%= params[:postcode] %></h1>
+
+<ul>
+<% @services.each do |service| %>
+  <li>
+  <%= service.title %>
+  <p><%= service.postcode %></p>
+  </li>
+  <% end %>
+</ul>
