@@ -4,11 +4,9 @@
       <h1>Pet Boom</h1>
       <h3>Find the right sitter for your pet!</h3>
     </span>
-    <form action="bookings/search">
+    <form action="services/search">
       <div class="search-fade form-group form-inline">
-        <input type="text" name="category" placeholder="Category" class="form-control width-600">
-        <!--<input type="date" name="start_date" placeholder="" class="form-control">
-        <input type="date" name="end_date" placeholder="" class="form-control">-->
+        <input type="text" name="postcode" placeholder="What's your postcode?" class="form-control width-600">
         <button type="submit" class="form-control btn btn-primary">Boom!</button>
       </div>
     </form>
@@ -19,5 +17,7 @@
 </div>
 
 <div class="container-white" id="index">
-  <%= render "/shared/service_card" %>
+  <div class="cards">
+    <%= render "/shared/service_card" %>
+  </div>
 </div>

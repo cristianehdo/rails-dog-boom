@@ -33,6 +33,16 @@
           </div>
         </div>
 
+
+        <div class="input-row">
+          <div class="input-icon">
+            <i class="fa fa-user" aria-hidden="true"></i>
+          </div>
+          <div class="input-holder">
+            <%= f.input :postcode, required: true, placeholder: 'Postcode', label: false %>
+          </div>
+        </div>
+
         <div class="form-actions">
           <%= f.button :submit, class: "btn-center" %>
         </div>

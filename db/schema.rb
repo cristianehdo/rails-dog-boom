@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171116113200) do
+
+ActiveRecord::Schema.define(version: 20171116130407) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +23,8 @@ ActiveRecord::Schema.define(version: 20171116113200) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "service_id"
+    t.string "postcode"
+    t.string "category"
     t.index ["service_id"], name: "index_bookings_on_service_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -32,6 +36,10 @@ ActiveRecord::Schema.define(version: 20171116113200) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "postcode"
+    t.integer "postcode_radius"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_services_on_user_id"
   end
 

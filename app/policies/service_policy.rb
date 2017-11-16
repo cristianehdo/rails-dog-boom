@@ -21,4 +21,8 @@ class ServicePolicy < ApplicationPolicy
     true
   end
 
+  def search?
+    true
+  end
+
 end

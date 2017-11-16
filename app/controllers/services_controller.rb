@@ -1,6 +1,6 @@
 class ServicesController < ApplicationController
   before_action :find_service, only: [ :show, :edit, :update, :destroy ]
-  skip_before_action :authenticate_user!, only: [ :index, :show ]
+  skip_before_action :authenticate_user!, only: [ :index, :show, :search ]
 
   def index
     @services = policy_scope(Service)
@@ -45,6 +45,16 @@ class ServicesController < ApplicationController
      @service.destroy
      authorize(@service)
      redirect_to services_path(@service)
+  end
+
+  def search
+    @services = Service.near(params[:postcode], 7)
+    authorize(@services)
+     @hash = Gmaps4rails.build_markers(@services) do |service, marker|
+      marker.lat service.latitude
+      marker.lng service.longitude
+      # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+    end
   end
 
   private
