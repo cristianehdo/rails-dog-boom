@@ -8,6 +8,7 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+
   </head>
   <body>
 
@@ -35,5 +36,26 @@
     <%= javascript_include_tag "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/markerclusterer/src/markerclusterer_compiled.js" %>
     <%= javascript_include_tag "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js" %>
     <%= yield(:after_js) %>
+
+        <script>
+      // Nav menu toggle
+$("#menu-trigger").click(function(){
+    $("#nav-menu").fadeToggle();
+});
+
+//model open
+$("#open-create").click(function(){
+  var scrollTop = window.scrollY;
+  $('#model-cover').css('top', scrollTop + "px");
+  $('#model-cover').fadeToggle();
+  $('body').css('overflow', 'hidden');
+});
+
+$("#model-close").click(function(){
+  $('#model-cover').fadeToggle();
+  $('body').css('overflow', 'scroll');
+});
+
+    </script>
   </body>
 </html>
