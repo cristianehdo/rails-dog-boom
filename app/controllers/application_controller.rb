@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!
 
+  before_action :set_empty_service
+
   include Pundit
 
   # Pundit: white-list approach.
@@ -19,5 +21,9 @@ class ApplicationController < ActionController::Base
 
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
+  end
+
+  def set_empty_service
+    @service = Service.new
   end
 end
