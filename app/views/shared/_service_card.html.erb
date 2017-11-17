@@ -1,3 +1,35 @@
+<% star1 = '<i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>' %>
+
+<% star2 = '<i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>' %>
+
+<% star3 = '<i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>' %>
+
+<% star4 = '<i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>' %>
+
+<% star5 = '<i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>' %>
+
+<% ratings = [star1, star2, star3, star4, star5] %>
+
 <div class="container">
   <div class="cards">
     <div class="row">
@@ -37,11 +69,7 @@
           </div>
           <div class="white-card-user-rating">
             <span>
-              <i class="fa fa-star filled" aria-hidden="true"></i>
-              <i class="fa fa-star filled" aria-hidden="true"></i>
-              <i class="fa fa-star filled" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
-              <i class="fa fa-star" aria-hidden="true"></i>
+              <%= ratings.sample.html_safe %>
             </span>
             <span class="tag-container">
               <div class="tag-point">

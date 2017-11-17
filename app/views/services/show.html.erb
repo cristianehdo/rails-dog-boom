@@ -1,3 +1,37 @@
+<% usernames = %w(andrew cris nathalie nati david joe lenny alex sandrine arthur joyce lucas mansoor romain sam andy) %>
+
+<% star1 = '<i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>' %>
+
+<% star2 = '<i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>' %>
+
+<% star3 = '<i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>' %>
+
+<% star4 = '<i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>' %>
+
+<% star5 = '<i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>
+            <i class="fa fa-star filled" aria-hidden="true"></i>' %>
+
+<% ratings = [star1, star2, star3, star4, star5] %>
+
 <div class="service-container">
   <div class="service-user-column">
     <%= cl_image_tag @service.user.photo, height: 280, width: 280, crop: :fill, class: "service-avatar" %>
@@ -26,7 +60,7 @@
           <i class="fa fa-star filled" aria-hidden="true"></i>
         </div>
         <div class="rating-bars">
-          <div class="rating-highlight" style="width:80%"></div>
+          <div class="rating-highlight" style="width:<%= (60..90).to_a.sample %>%"></div>
         </div>
       </div>
       <div class="rating-row">
@@ -38,7 +72,7 @@
           <i class="fa fa-star" aria-hidden="true"></i>
         </div>
         <div class="rating-bars">
-          <div class="rating-highlight" style="width:62%"></div>
+          <div class="rating-highlight" style="width:<%= (60..80).to_a.sample %>%"></div>
         </div>
       </div>
       <div class="rating-row">
@@ -50,7 +84,7 @@
           <i class="fa fa-star" aria-hidden="true"></i>
         </div>
         <div class="rating-bars">
-          <div class="rating-highlight" style="width:50%"></div>
+          <div class="rating-highlight" style="width:<%= (33..88).to_a.sample %>%"></div>
         </div>
       </div>
       <div class="rating-row">
@@ -62,7 +96,7 @@
           <i class="fa fa-star" aria-hidden="true"></i>
         </div>
         <div class="rating-bars">
-          <div class="rating-highlight" style="width:27%"></div>
+          <div class="rating-highlight" style="width:<%= (10..45).to_a.sample %>%"></div>
         </div>
       </div>
       <div class="rating-row">
@@ -74,7 +108,7 @@
           <i class="fa fa-star" aria-hidden="true"></i>
         </div>
         <div class="rating-bars">
-          <div class="rating-highlight" style="width:14%"></div>
+          <div class="rating-highlight" style="width:<%= (5..60).to_a.sample %>%"></div>
         </div>
       </div>
     </div>
@@ -86,14 +120,10 @@
           <!-- reviewers avatar -->
           <%= cl_image_tag @service.user.photo, height: 40, width: 40, crop: :fill, class: "review-avatar" %>
           <!-- reviewers name -->
-          <p class="review-username">username</p>
+          <p class="review-username"><%= usernames.sample %></p>
           <!-- reviewer rating stars -->
           <div class="review-stars-container">
-            <i class="fa fa-star filled" aria-hidden="true"></i>
-            <i class="fa fa-star filled" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
+            <%= ratings.sample.html_safe %>
           </div>
         </div>
         <div class="review-up-arrow"></div>
@@ -112,14 +142,10 @@
           <!-- reviewers avatar -->
           <%= cl_image_tag @service.user.photo, height: 40, width: 40, crop: :fill, class: "review-avatar" %>
           <!-- reviewers name -->
-          <p class="review-username">username</p>
+          <p class="review-username"><%= usernames.sample %></p>
           <!-- reviewer rating stars -->
           <div class="review-stars-container">
-            <i class="fa fa-star filled" aria-hidden="true"></i>
-            <i class="fa fa-star filled" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
+            <%= ratings.sample.html_safe %>
           </div>
         </div>
         <div class="review-up-arrow"></div>
@@ -138,14 +164,10 @@
           <!-- reviewers avatar -->
           <%= cl_image_tag @service.user.photo, height: 40, width: 40, crop: :fill, class: "review-avatar" %>
           <!-- reviewers name -->
-          <p class="review-username">username</p>
+          <p class="review-username"><%= usernames.sample %></p>
           <!-- reviewer rating stars -->
           <div class="review-stars-container">
-            <i class="fa fa-star filled" aria-hidden="true"></i>
-            <i class="fa fa-star filled" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
+            <%= ratings.sample.html_safe %>
           </div>
         </div>
         <div class="review-up-arrow"></div>
@@ -164,14 +186,10 @@
           <!-- reviewers avatar -->
           <%= cl_image_tag @service.user.photo, height: 40, width: 40, crop: :fill, class: "review-avatar" %>
           <!-- reviewers name -->
-          <p class="review-username">username</p>
+          <p class="review-username"><%= usernames.sample %></p>
           <!-- reviewer rating stars -->
           <div class="review-stars-container">
-            <i class="fa fa-star filled" aria-hidden="true"></i>
-            <i class="fa fa-star filled" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
+            <%= ratings.sample.html_safe %>
           </div>
         </div>
         <div class="review-up-arrow"></div>
@@ -190,14 +208,10 @@
           <!-- reviewers avatar -->
           <%= cl_image_tag @service.user.photo, height: 40, width: 40, crop: :fill, class: "review-avatar" %>
           <!-- reviewers name -->
-          <p class="review-username">username</p>
+          <p class="review-username"><%= usernames.sample %></p>
           <!-- reviewer rating stars -->
           <div class="review-stars-container">
-            <i class="fa fa-star filled" aria-hidden="true"></i>
-            <i class="fa fa-star filled" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
+            <%= ratings.sample.html_safe %>
           </div>
         </div>
         <div class="review-up-arrow"></div>
@@ -216,14 +230,10 @@
           <!-- reviewers avatar -->
           <%= cl_image_tag @service.user.photo, height: 40, width: 40, crop: :fill, class: "review-avatar" %>
           <!-- reviewers name -->
-          <p class="review-username">username</p>
+          <p class="review-username"><%= usernames.sample %></p>
           <!-- reviewer rating stars -->
           <div class="review-stars-container">
-            <i class="fa fa-star filled" aria-hidden="true"></i>
-            <i class="fa fa-star filled" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
+             <%= ratings.sample.html_safe %>
           </div>
         </div>
         <div class="review-up-arrow"></div>
