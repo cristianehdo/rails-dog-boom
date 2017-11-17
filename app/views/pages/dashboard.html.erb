@@ -4,7 +4,6 @@
   </div>
 </div>
 
-
 <ul>
   <% current_user.bookings.each do |booking| %>
     <li><%= booking.status %></li>
@@ -13,5 +12,3 @@
 
 
 <%= link_to 'edit', edit_user_registration_path %>
-
-

@@ -60,10 +60,9 @@
           <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "menu-link") %>
         </div>
       </div>
-      <%= link_to(new_service_path, class: "btn btn-primary plus") do %>
+      <div class="btn btn-primary" id="open-create">
         <i class="fa fa-plus" aria-hidden="true"></i>
-      <% end %>
-      <div class="btn btn-primary" id="open-create">MODEL</div>
+      </div>
     <% else %>
       <%= link_to('Sign up', new_user_registration_path, class: "btn btn-primary") %>
       <% if current_page?(root_path) %>
@@ -78,6 +77,7 @@
 
 <div class="model-cover" id="model-cover">
   <div class="create-model">
+    <%= render 'shared/service_form' %>
   </div>
   <div class="model-close" id="model-close">
     <i class="fa fa-times" aria-hidden="true"></i>
