@@ -21,6 +21,11 @@
     background-color: $brand-primary;
 }
 
+.white-card-lg:hover .btn-view
+{
+    color: #6a767c;
+}
+
 
 .cards
 {
@@ -41,7 +46,7 @@
 
     width: 350px;
     margin: 10px 0 30px 0;
-    padding: 0;
+    padding: 0 0 18px 0;
 
     color: black;
     border-radius: 4px;
@@ -50,6 +55,7 @@
     align-items: center;
     justify-content: space-between;
 }
+
 .white-card-user-details
 {
     display: flex;
@@ -94,12 +100,13 @@
 .white-card-link
 {
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     top: 0;
     right: 0;
     bottom: 0;
 
     width: 100%;
+    height: calc(100% - 70px);
 
     opacity: 0;
     background: black;
@@ -290,25 +297,71 @@
     background-color: #fff;
 }
 
+.btn-view
+{
+    font-size: 15px;
+    line-height: 58px;
+
+    z-index: 3;
+
+    display: inline-block;
+
+    width: 150px;
+    margin: 0 10px 0 0;
+
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #c9d5db;
+    border-radius: 3px;
+    background-color: #f2f5f7;
+}
+
+.btn-view:hover
+{
+    text-decoration: none;
+}
+
+
 .btn-book
 {
     font-size: 15px;
     line-height: 58px;
 
-    display: block;
+    z-index: 3;
 
-    width: 100%;
+    display: inline-block;
 
+    width: 150px;
+
+    text-decoration: none;
     letter-spacing: 1px;
     text-transform: uppercase;
 
     color: #c9d5db;
+    border-radius: 3px;
     background-color: #f2f5f7;
 }
 
-.cards-with-map {
-  display: flex;
-  .cards {
-    flex-grow: 1;
-  }
+.btn-book:hover
+{
+    text-decoration: none;
+}
+
+
+.cards-btn
+{
+    z-index: 3;
+
+    display: flex;
+}
+
+.cards-with-map
+{
+    display: flex;
+    .cards
+    {
+        flex-grow: 1;
+    }
 }
