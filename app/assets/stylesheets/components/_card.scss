@@ -70,7 +70,7 @@
         text-align: left;
         text-indent: 15px;
 
-        color: #989898;
+        color: #11294f;
 
         flex-grow: 1;
     }
@@ -81,20 +81,24 @@
 {
     width: 90%;
     padding: 20px;
-
+    height: 150px;
+    overflow:hidden;
     border: 1px solid #eceff6;
     border-width: 1px 0 0 0;
+    text-align: center;
     h2
     {
         font-size: 22px;
 
         margin: 0;
         padding: 10px;
+        color:#11294f;
     }
     p
     {
         font-size: 14px;
         font-weight: lighter;
+        color: #11294f;
     }
 }
 .white-card-link
@@ -308,7 +312,7 @@
 
     width: 150px;
     margin: 0 10px 0 0;
-
+    text-align:center;
     text-decoration: none;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -334,7 +338,7 @@
     display: inline-block;
 
     width: 150px;
-
+    text-align: center;
     text-decoration: none;
     letter-spacing: 1px;
     text-transform: uppercase;

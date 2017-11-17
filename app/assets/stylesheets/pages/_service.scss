@@ -44,7 +44,7 @@
     font-weight: 900;
 
     margin: 40px 0 0 0;
-
+    color:#11294f;
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -55,7 +55,7 @@
     font-size: 20px;
 
     margin: 20px 0 0 0;
-
+    color:#11294f;
     text-align: center;
     letter-spacing: 1px;
     text-transform: capitalize;
@@ -66,6 +66,7 @@
     font-size: 15px;
     font-weight: 600;
     font-style: italic;
+    color:#11294f;
 
     margin: 10px 0 0 0;
 
@@ -127,7 +128,7 @@
 
         margin: 0 0 0 3px;
 
-        color: #f4f4f4;
+        color: #f9faff;
     }
     .filled
     {
@@ -183,7 +184,7 @@
 }
 
 .review-username {
-  color: #989898;
+  color:#11294f;
   line-height: 40px;
   font-size: 14px;
   text-transform: capitalize;
@@ -193,7 +194,7 @@
   margin: 0 0 0 20px;
   i {
     line-height: 40px;
-    color: #f4f4f4;
+    color: #f9faff;
   }
   .filled {
     color: $brand-primary;
