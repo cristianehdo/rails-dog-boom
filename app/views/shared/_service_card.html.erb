@@ -74,7 +74,7 @@
             <span class="tag-container">
               <div class="tag-point">
                 <div class="tag-hole"></div>
-              </div><div class="tag-box">£<%= service.cost %></div>
+              </div><div class="tag-box">£<%= service.cost.round %>/h</div>
             </span>
           </div>
           <%= link_to "", service_path(service), class:"white-card-link" %>
