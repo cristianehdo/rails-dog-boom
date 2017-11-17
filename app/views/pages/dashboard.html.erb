@@ -1,14 +1,37 @@
-<div class="card profile">
-  <div class="card-content">
-    <%= cl_image_tag current_user.photo, height: 250, width: 300, crop: :fill %>
+<div class="profile">
+  <div class="">
+   <%= cl_image_tag current_user.photo, height: 250, width: 250, crop: :fill, class: "profile-photo"%>
+   <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+
+   <%= link_to 'edit', edit_user_registration_path, class: "btn btn-primary dash" %>
+
+   </div>
   </div>
+
+
+
+<div class="dashboard-container">
+     <div class="left">
+       <h2>Your services</h2>
+       <% current_user.services.each do |service| %>
+         <%= service.category %><br>
+           <%= service.description %>
+
+       <h2><%= current_user.address %></h2>
+      <% end %>
+     </div>
+     <div class="right">
+      <h2>Pending Bookings</h2>
+
+        <% current_user.services.each do |service| %>
+          <% service.bookings.each do |booking| %>
+            <%= booking.category %> / <%= booking.status %>
+          <% end %>
+        <% end %>
+
+
+     </div>
 </div>
 
-<ul>
-  <% current_user.bookings.each do |booking| %>
-    <li><%= booking.status %></li>
-  <% end %>
-</ul>
 
 
-<%= link_to 'edit', edit_user_registration_path %>
