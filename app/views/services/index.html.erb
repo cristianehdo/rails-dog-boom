@@ -22,6 +22,7 @@
   </div>
 </div>
 
+<%= content_for(:after_js) %>
 <script>
   function initUpdateNavbarOnScroll() {
   const navbar = document.getElementById('navbar');
@@ -62,3 +63,4 @@
 
 initUpdateNavbarOnScroll()
 </script>
+<% end %>
