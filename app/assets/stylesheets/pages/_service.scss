@@ -1,0 +1,227 @@
+
+.service-container
+{
+    display: flex;
+
+    width: 820px;
+    margin: 0 auto;
+    padding: 40px 0;
+    h1 {
+      text-transform:uppercase;
+      font-size: 16px;
+      letter-spacing: 1px;
+      font-family: Montserrat !important;
+      padding: 0 0 10px 0;
+    }
+}
+
+.service-right
+{
+    width: 500px;
+    margin: 0 0 0 40px;
+}
+
+.service-user-column
+{
+    width: 320px;
+    padding: 20px;
+}
+
+.service-avatar
+{
+    display: block;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+    background-color: #f4f4f4;
+}
+
+.service-name
+{
+    font-size: 30px;
+    font-weight: 900;
+
+    margin: 40px 0 0 0;
+
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.service-title
+{
+    font-size: 20px;
+
+    margin: 20px 0 0 0;
+
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.service-description
+{
+    font-size: 15px;
+    font-weight: 600;
+    font-style: italic;
+
+    margin: 10px 0 0 0;
+
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.btn-book-service
+{
+    font-size: 15px;
+    line-height: 48px;
+
+    z-index: 3;
+
+    display: block;
+
+    width: 150px;
+    margin: 20px auto 0 auto;
+
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #fff;
+    border-radius: 3px;
+    background-color: $brand-primary;
+}
+
+.btn-book-service:hover
+{
+    text-decoration: none;
+}
+
+.rating-container
+{
+    display: block;
+
+    width: 100%;
+}
+
+.rating-row
+{
+    display: flex;
+
+    width: 500px;
+    margin: 0 0 10px 0;
+}
+
+.rating-stars
+{
+    display: inline;
+
+    width: 250px;
+    i
+    {
+        font-size: 23px;
+        line-height: 35px;
+
+        margin: 0 0 0 3px;
+
+        color: #f4f4f4;
+    }
+    .filled
+    {
+        color: $brand-primary;
+    }
+}
+
+.rating-bars
+{
+    display: inline;
+    overflow: hidden;
+
+    width: 500px;
+    height: 35px;
+
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.rating-highlight
+{
+    height: 35px;
+
+    background-color: $brand-primary;
+}
+
+.service-reviews-container
+{
+    display: block;
+
+    width: 500px;
+}
+
+.review-container
+{
+    width: 500px;
+    margin: 0 0 20px 0;
+}
+
+.review-details
+{
+    width: 500px;
+    margin: 0;
+    display:flex;
+}
+
+.review-avatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color:#f4f4f4;
+  margin: 0 20px 0 10px;
+}
+
+.review-username {
+  color: #989898;
+  line-height: 40px;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.review-stars-container {
+  margin: 0 0 0 20px;
+  i {
+    line-height: 40px;
+    color: #f4f4f4;
+  }
+  .filled {
+    color: $brand-primary;
+  }
+}
+
+.review-up-arrow
+{
+    width: 0;
+    height: 0;
+
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    margin: 0 0 0 20px;
+}
+
+.review-content
+{
+    width: 500px;
+}
+
+.review-bubble
+{
+    width: 100%;
+    padding: 25px;
+    color: #989898;
+    font-size: 14px;
+    border-radius: 3px;
+    background-color: #fff;
+}
