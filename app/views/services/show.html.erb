@@ -37,6 +37,12 @@
 <div class="service-container">
   <div class="service-user-column">
     <%= cl_image_tag @service.user.photo, height: 280, width: 280, crop: :fill, class: "service-avatar" %>
+              <span class="tag-container" style="position:absolute; top:260px; left:200px; margin: 0 auto;">
+              <div class="tag-point">
+                <div class="tag-hole"></div>
+              </div><div class="tag-box">£<%= @service.cost.round %>/h</div>
+            </span>
+
     <p class="service-name"><%= @service.user.first_name %> <%= @service.user.last_name %></p>
     <% if current_user != @service.user %>
       <%= link_to "Book", new_service_booking_path(@service), class:"btn-book-service" %>
