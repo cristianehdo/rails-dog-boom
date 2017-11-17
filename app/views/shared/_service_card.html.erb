@@ -6,7 +6,7 @@
         <div class="white-card-lg">
           <div class="white-card-user-details">
             <% img = service.user.photo? ? service.user.photo : "smf6cc5utl1gakebngus"  %>
-            <%= cl_image_tag(img, class: "white-card-user avatar")%>
+            <%= cl_image_tag(img,:width => 40, :height => 40, :crop => :fill, class: "white-card-user avatar")%>
             <span class="user-name"><%= service.user.first_name %></span>
             <span>
               <% if service.category == "walking" %>
@@ -49,8 +49,11 @@
               </div><div class="tag-box">£30</div>
             </span>
           </div>
-          <a href="#" class="btn-book">Book</a>
           <%= link_to "", service_path(service), class:"white-card-link" %>
+          <div class="card-btns">
+            <%= link_to "View", service_path(service), class:"btn-view" %>
+            <%= link_to "Book", new_service_booking_path(service), class:"btn-book" %>
+          </div>
         </div>
       </div>
       <% end %>
