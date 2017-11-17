@@ -1,5 +1,5 @@
 function initUpdateNavbarOnScroll() {
-  const navbar = document.querySelector('.navbar-pet');
+  const navbar = document.getElementById('navbar');
   const btn = document.getElementById('login-btn');
   const logo = document.getElementById('logo-text');
   const icons = document.querySelectorAll('.icon-navbar');
@@ -9,7 +9,6 @@ function initUpdateNavbarOnScroll() {
   window.addEventListener('scroll', (event) => {
     if (window.scrollY >= window.innerHeight) {
       navbar.classList.remove('transparent-nav');
-      btn.classList.add("btn-to-blue");
       logo.classList.remove('white-logo');
       icons.forEach((icon) => {
         icon.classList.add('icon-path-blue');
@@ -17,9 +16,11 @@ function initUpdateNavbarOnScroll() {
       iconsText.forEach((text) => {
         text.classList.add('icon-text-blue');
       });
+      if (btn) {
+        btn.classList.add("btn-to-blue");
+      }
     } else {
       navbar.classList.add('transparent-nav');
-      btn.classList.remove('btn-to-blue');
       logo.classList.add('white-logo');
       icons.forEach((icon) => {
         icon.classList.remove('icon-path-blue');
@@ -27,6 +28,9 @@ function initUpdateNavbarOnScroll() {
       iconsText.forEach((text) => {
         text.classList.remove('icon-text-blue');
       });
+      if (btn) {
+        btn.classList.remove('btn-to-blue');
+      }
     }
   });
 }
