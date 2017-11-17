@@ -1,5 +1,11 @@
 <div class="display-results-title">
-  <i class="fa fa-search" aria-hidden="true"></i> Displaying results for <span><%= params[:postcode] %></span>
+
+  <form action="search">
+      <div class="search-fade">
+        <i class="fa fa-search" aria-hidden="true"></i><input type="text" name="postcode" placeholder="Update postcode" class="form-control">
+        <input type="hidden" name= "category" value= <%= params[:category] %> >
+      </div>
+    </form>
 </div>
 
 
