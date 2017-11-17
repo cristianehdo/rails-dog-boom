@@ -1,5 +1,6 @@
 
 puts "Cleaning db..."
+
 Booking.destroy_all
 User.destroy_all
 Service.destroy_all

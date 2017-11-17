@@ -48,13 +48,27 @@ class ServicesController < ApplicationController
   end
 
   def search
-    @services = Service.near(params[:postcode], 7)
+    if params[:category] && params[:postcode]
+      postcode = params[:postcode]
+      query = "category = '#{params[:category]}'"
+    elsif params[:category].nil?
+      postcode = params[:postcode]
+      query = "category = 'walking' OR (category = 'brooming') OR (category = 'sitting')"
+    else
+      postcode = "WC2N 5DU" # london postcode
+      query = "category = '#{params[:category]}'"
+    end
+    @services = Service.near(postcode, 7).where(query)
     authorize(@services)
      @hash = Gmaps4rails.build_markers(@services) do |service, marker|
       marker.lat service.latitude
       marker.lng service.longitude
       # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
     end
+  end
+
+  def seach_by_category
+    @services = Service.where(category: params[:category])
   end
 
   private

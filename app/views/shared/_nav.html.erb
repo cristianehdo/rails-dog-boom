@@ -8,7 +8,7 @@
   <% end %>
 
 <div class="navbar-pet-middle">
-  <a href="" class="nav-category-pet navbar-pet-link">
+  <%= link_to search_services_path(category: "walking", postcode: params[:postcode]), class: "nav-category-pet navbar-pet-link" do %>
     <div class="icon-left">
       <?xml version="1.0" encoding="UTF-8"?>
       <svg enable-background="new 0 0 186.8 143" class="icon" version="1.1" viewBox="0 0 186.8 143" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -20,8 +20,9 @@
     <div class="icon-text <% if current_page?(root_path) %>icon-text-white<% else %>icon-text-blue<% end %>">
       Walking
     </div>
-  </a>
-  <a href="" class="nav-category-pet navbar-pet-link">
+   <% end %>
+  <!-- <a href="" class="nav-category-pet navbar-pet-link"> -->
+  <%= link_to search_services_path(category: "sitting", postcode: params[:postcode]), class: "nav-category-pet navbar-pet-link" do %>
     <div class="icon-left">
       <?xml version="1.0" encoding="UTF-8"?>
       <svg enable-background="new 0 0 185.6 149" class="icon" version="1.1" viewBox="0 0 185.6 149" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -33,8 +34,8 @@
     <div class="icon-text <% if current_page?(root_path) %>icon-text-white<% else %>icon-text-blue<% end %>">
       Sitting
     </div>
-  </a>
-  <a href="" class="nav-category-pet navbar-pet-link">
+  <% end %>
+    <%= link_to search_services_path(category: "grooming", postcode: params[:postcode]), class: "nav-category-pet navbar-pet-link" do %>
     <div class="icon-left">
       <?xml version="1.0" encoding="UTF-8"?>
       <svg enable-background="new 0 0 144.7 146.7" class="icon" version="1.1" viewBox="0 0 144.7 146.7" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +46,7 @@
     <div class="icon-text <% if current_page?(root_path) %>icon-text-white<% else %>icon-text-blue<% end %>">
       Grooming
     </div>
-  </a>
+  <% end %>
 </div>
   <!-- Right Navigation -->
   <div class="navbar-pet-right">
