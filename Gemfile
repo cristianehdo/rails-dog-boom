@@ -14,6 +14,7 @@ gem 'faker'
 gem "geocoder"
 gem "coffee-rails"
 gem "gmaps4rails"
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
